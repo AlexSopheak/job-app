@@ -2,7 +2,7 @@
 
 <h1>Jobs</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Title</th>
@@ -17,14 +17,14 @@
       <th>Approved state</th>
       <th>Status</th>
       <th>Remark</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
-        <td><%= job.title %></td>
+        <td><%= link_to job.title, job %></td>
         <td><%= job.total_employees %></td>
         <td><%= job.description %></td>
         <td><%= job.requirement %></td>
@@ -36,7 +36,6 @@
         <td><%= job.approved_state %></td>
         <td><%= job.status %></td>
         <td><%= job.remark %></td>
-        <td><%= link_to 'Show', job %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
         <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

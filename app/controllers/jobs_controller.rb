@@ -16,7 +16,7 @@ class JobsController < ApplicationController
   end
 
   def create
-    if @job = Job.create(course_params)
+    if @job = Job.create(job_params)
       redirect_to @job
     else
       render :new

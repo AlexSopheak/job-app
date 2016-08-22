@@ -1,0 +1,7 @@
+= simple_form_for(@category, html: { class: 'form-horizontal'}) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.collection_select :category_id, Category.all, :id, :name
+    = f.input :name
+    = f.input :description
+    = f.button :submit

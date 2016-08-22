@@ -1,0 +1,17 @@
+= simple_form_for(@job, html: { class: 'form-horizontal'}) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.collection_select :category_id, Category.all, :id, :name
+    = f.input :title
+    = f.input :total_employees
+    = f.input :description
+    = f.input :requirement
+    = f.input :term
+    = f.input :location
+    = f.input :salary
+    = f.input :deadline
+    = f.input :approved_date
+    = f.input :approved_state
+    = f.input :status
+    = f.input :remark
+    = f.button :submit

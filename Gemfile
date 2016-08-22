@@ -10,7 +10,8 @@ gem 'haml'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'bootstrap-select-rails'
-
+gem 'devise', '~> 4.2'
+gem 'mail_form'
 
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
@@ -34,3 +35,8 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
